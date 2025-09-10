@@ -22,42 +22,55 @@
         <!-- Background Overlay -->
         <div class="absolute inset-0 bg-black/50"></div>
 
-        <!-- Floating Navigation Bar -->
-        <nav class="absolute top-4 left-1/2 transform -translate-x-1/2 w-[95%] max-w-7xl px-6 py-4 flex justify-between items-center bg-white rounded-3xl shadow-xl transition-all transform hover:scale-[1.01] duration-300">
-            <a href="#" class="h-16">
-                <img src="https://i.imgur.com/i047x7r.jpeg" alt="MSMF Logo" class="h-full">
-            </a>
-            <div class="md:hidden">
-                <button id="menu-toggle" class="text-slate-900 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                    </svg>
-                </button>
-            </div>
-            <div id="nav-menu" class="hidden md:flex flex-col md:flex-row md:items-center md:space-x-8 mt-4 md:mt-0">
-                <a href="#about" class="block py-2 px-4 rounded-lg hover:bg-slate-200 transition">About Us</a>
-                
-                <!-- Events Dropdown -->
-                <div class="relative group">
-                    <button class="block py-2 px-4 rounded-lg hover:bg-slate-200 transition focus:outline-none">
-                        Events
-                    </button>
-                    <div class="hidden group-hover:block absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-                        <div class="py-1">
-                            <a href="#future-events" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Future Events</a>
-                            <a href="#past-events" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Past Events</a>
-                        </div>
-                    </div>
-                </div>
+        <body class="bg-slate-50 text-slate-900">
 
-                <a href="#team" class="block py-2 px-4 rounded-lg hover:bg-slate-200 transition">Our Team</a>
-                <a href="#contact" class="block py-2 px-4 rounded-lg hover:bg-slate-200 transition">Contact</a>
-                <a href="https://mulife.ie/society/investors" target="_blank" class="mt-4 md:mt-0 inline-block bg-sky-500 text-white px-6 py-2 rounded-full font-medium shadow-lg hover:bg-sky-600 transition-colors">Join Us</a>
-            </div>
-        </nav>
+            <!-- Floating Navigation Bar -->
+            <nav class="fixed top-4 left-1/2 transform -translate-x-1/2 w-[95%] max-w-7xl z-50">
+                <div class="px-6 py-4 flex justify-between items-center bg-white rounded-3xl shadow-xl transition-all transform hover:scale-[1.01] duration-300">
+                    <!-- Left: Logo -->
+                    <a href="index.html" class="h-20">
+                        <img src="https://i.imgur.com/i047x7r.jpeg" alt="MSMF Logo" class="h-full">
+                    </a>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <div class="md:hidden">
+                        <button id="menu-toggle" class="text-slate-900 focus:outline-none">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                            </svg>
+                        </button>
+                    </div>
+        
+                    <!-- Center: Nav Links -->
+                    <div id="nav-menu" class="hidden md:flex flex-col md:flex-row md:items-center md:space-x-8 mt-4 md:mt-0 flex-grow justify-center">
+                        <a href="index.html#about" class="block py-2 px-4 rounded-lg hover:bg-slate-200 transition">About Us</a>
+                        
+                        <!-- Events Dropdown -->
+                        <div class="relative group">
+                            <button class="block py-2 px-4 rounded-lg hover:bg-slate-200 transition focus:outline-none">
+                                Events
+                            </button>
+                            <div class="absolute hidden group-hover:block top-full left-0 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                                <div class="py-1">
+                                    <a href="events.html#future-events" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Future Events</a>
+                                    <a href="events.html#past-events" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Past Events</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <a href="news.html" class="block py-2 px-4 rounded-lg hover:bg-slate-200 transition">News</a>
+        
+                        <a href="index.html#team" class="block py-2 px-4 rounded-lg hover:bg-slate-200 transition">Our Team</a>
+                        <a href="index.html#contact" class="block py-2 px-4 rounded-lg hover:bg-slate-200 transition">Contact</a>
+                    </div>
+        
+                    <!-- Right: Join Us Button -->
+                    <a href="https://mulife.ie/society/investors" target="_blank" class="hidden md:inline-block bg-sky-500 text-white px-6 py-2 rounded-full font-medium shadow-lg hover:bg-sky-600 transition-colors">Join Us</a>
+                </div>
+            </nav>
 
         <!-- Hero Section Content -->
-        <div class="container mx-auto px-6 text-center relative z-10 pt-20">
+        <div class="container mx-auto px-6 text-center relative z-10 pt-28">
             <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
                 The Maynooth Student <br class="hidden md:block"> Managed Fund
             </h1>
@@ -141,40 +154,16 @@
             <p class="text-lg text-slate-600 mb-8">
                 We are always looking for passionate and driven students to join our team. Fill out the form below or contact us to learn more about the application process and our upcoming events.
             </p>
-            <form action="#" class="bg-slate-200 p-8 rounded-3xl shadow-2xl">
+            <form action="mailto:investors@mulife.ie" method="POST" enctype="text/plain" class="bg-slate-200 p-8 rounded-3xl shadow-2xl">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <input type="text" placeholder="Your Name" class="bg-white text-slate-900 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-colors">
-                    <input type="email" placeholder="Your Email" class="bg-white text-slate-900 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-colors">
+                    <input type="text" name="name" placeholder="Your Name" class="bg-white text-slate-900 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-colors">
+                    <input type="email" name="email" placeholder="Your Email" class="bg-white text-slate-900 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-colors">
                 </div>
-                <textarea placeholder="Your Message" rows="4" class="w-full mt-6 bg-white text-slate-900 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-colors"></textarea>
+                <textarea name="message" placeholder="Your Message" rows="4" class="w-full mt-6 bg-white text-slate-900 rounded-xl p-4 focus:outline-none focus:ring-2 focus:ring-sky-500 transition-colors"></textarea>
                 <button type="submit" class="mt-6 inline-block bg-sky-500 text-white px-8 py-3 rounded-full font-medium text-lg shadow-lg hover:bg-sky-600 transition-colors">
                     Send Message
                 </button>
             </form>
-        </div>
-    </section>
-
-    <!-- Future Events Section -->
-    <section id="future-events" class="py-20 bg-slate-100 rounded-3xl mx-6">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-12">
-                Future Events
-            </h2>
-            <p class="text-slate-600 text-lg leading-relaxed">
-                No events planned yet.
-            </p>
-        </div>
-    </section>
-
-    <!-- Past Events Section -->
-    <section id="past-events" class="py-20">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-12">
-                Past Events
-            </h2>
-            <p class="text-slate-600 text-lg leading-relaxed">
-                We were delighted to take part in the Goodbody Investment Challenge.
-            </p>
         </div>
     </section>
 
@@ -185,11 +174,12 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Mobile Menu Toggle -->
+    <!-- JavaScript for Mobile Menu -->
     <script>
         const menuToggle = document.getElementById('menu-toggle');
         const navMenu = document.getElementById('nav-menu');
 
+        // Toggle mobile navigation menu
         menuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('hidden');
             navMenu.classList.toggle('flex');

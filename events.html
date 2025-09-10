@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSMF Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <!-- Floating Navigation Bar -->
+    <nav class="fixed top-4 left-1/2 transform -translate-x-1/2 w-[95%] max-w-7xl z-50">
+        <div class="px-6 py-4 flex justify-between items-center bg-white rounded-3xl shadow-xl transition-all transform hover:scale-[1.01] duration-300">
+            <!-- Left: Logo -->
+            <a href="index.html" class="h-20">
+                <img src="https://i.imgur.com/i047x7r.jpeg" alt="MSMF Logo" class="h-full">
+            </a>
+            
+            <!-- Mobile Menu Toggle -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-slate-900 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Center: Nav Links -->
+            <div id="nav-menu" class="hidden md:flex flex-col md:flex-row md:items-center md:space-x-8 mt-4 md:mt-0 flex-grow justify-center">
+                <a href="index.html#about" class="block py-2 px-4 rounded-lg hover:bg-slate-200 transition">About Us</a>
+                
+                <!-- Events Dropdown -->
+                <div class="relative group">
+                    <button class="block py-2 px-4 rounded-lg hover:bg-slate-200 transition focus:outline-none">
+                        Events
+                    </button>
+                    <div class="absolute hidden group-hover:block top-full left-0 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                        <div class="py-1">
+                            <a href="#future-events" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Future Events</a>
+                            <a href="#past-events" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Past Events</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="news.html" class="block py-2 px-4 rounded-lg hover:bg-slate-200 transition">News</a>
+
+                <a href="index.html#team" class="block py-2 px-4 rounded-lg hover:bg-slate-200 transition">Our Team</a>
+                <a href="index.html#contact" class="block py-2 px-4 rounded-lg hover:bg-slate-200 transition">Contact</a>
+            </div>
+
+            <!-- Right: Join Us Button -->
+            <a href="https://mulife.ie/society/investors" target="_blank" class="hidden md:inline-block bg-sky-500 text-white px-6 py-2 rounded-full font-medium shadow-lg hover:bg-sky-600 transition-colors">Join Us</a>
+        </div>
+    </nav>
+    
+    <!-- Future Events Section -->
+    <section id="future-events" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-12">
+                Future Events
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Aidan Donnelly Event Card -->
+                <div class="bg-slate-100 rounded-2xl p-6 shadow-md">
+                    <h3 class="text-2xl font-bold mb-4 text-sky-600">Speaker: Aidan Donnelly from Davy</h3>
+                    <p class="text-slate-600 mb-4">
+                        Join us for an exclusive talk with Aidan Donnelly from Davy, where he will share his insights on the current market trends and career paths in the finance industry.
+                    </p>
+                    <p class="text-sm text-slate-500 font-medium">
+                        <span class="font-bold">Date:</span> November 2025
+                    </p>
+                </div>
+                <!-- The Fundamentals of Valuation Seminar -->
+                <div class="bg-slate-100 rounded-2xl p-6 shadow-md">
+                    <h3 class="text-2xl font-bold mb-4 text-sky-600">The Fundamentals of Valuation Seminar</h3>
+                    <p class="text-slate-600 mb-4">
+                        Join us for an exclusive seminar where we will cover the core principles of business valuation, financial modeling, and discounted cash flow analysis.
+                    </p>
+                    <p class="text-sm text-slate-500 font-medium">
+                        <span class="font-bold">Date:</span> Coming Soon!
+                    </p>
+                </div>
+                <!-- Other future events will go here -->
+                <div class="bg-slate-100 rounded-2xl p-6 shadow-md">
+                     <h3 class="text-2xl font-bold mb-4 text-slate-900">No events planned yet</h3>
+                    <p class="text-slate-600 mb-4">
+                        Keep an eye on our social media and this page for updates on our next exciting events.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Past Events Section -->
+    <section id="past-events" class="py-20 bg-slate-100">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-12">
+                Past Events
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Example Past Event Card -->
+                <div class="bg-white rounded-2xl p-6 shadow-md">
+                    <h3 class="text-2xl font-bold mb-4 text-sky-600">Goodbody Investment Challenge</h3>
+                    <p class="text-slate-600 mb-4">
+                        We were delighted to take part in the Goodbody Investment Challenge, where our members put their skills to the test in a real-world competition.
+                    </p>
+                    <p class="text-sm text-slate-500 font-medium">
+                        <span class="font-bold">Date:</span> October 2024
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-200 border-t border-slate-300 py-10">
+        <div class="container mx-auto px-6 text-center text-sm text-slate-500">
+            <p>&copy; 2024 Maynooth Student Managed Fund. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+
+        // Toggle mobile navigation menu
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('hidden');
+            navMenu.classList.toggle('flex');
+        });
+    </script>
+</body>
+</html>
